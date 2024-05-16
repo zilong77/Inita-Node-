@@ -23,7 +23,7 @@
 sudo apt update && sudo apt upgrade -y
 ```
 
-## Install Dependecies
+## Install Dependencies
 ```
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
@@ -88,7 +88,7 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 ```
-## Register Service
+## Start Service
 ```
 sudo systemctl daemon-reload && \
 sudo systemctl enable initiad && \
@@ -96,6 +96,7 @@ sudo systemctl start initiad
 ```
 ## Create Screen and Check Logs
 ```
+screen -Rd initiad
 sudo journalctl -fu initiad -o cat
 ```
 ## Post Installation
