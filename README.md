@@ -5,7 +5,7 @@
 
 # Official Links
 ### [Official Document](https://docs.initia.xyz/run-initia-node/running-initia-node)
-### [Celestia Official Discord](https://discord.gg/initia)
+### [Initia Official Discord](https://discord.gg/initia)
 ### [Initia Faucet](https://faucet.testnet.initia.xyz)
 
 # Explorer
