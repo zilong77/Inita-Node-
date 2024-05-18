@@ -73,16 +73,17 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 
 ## Create Service
 ```
+sudo tee /etc/systemd/system/initiad.service > /dev/null <<EOF
 [Unit]
-Description=initia node
-After=network-online.target
+Description=Initia Node
+After=network.target
 
 [Service]
 User=$USER
-ExecStart=/usr/bin/initiad start
+Type=simple
+ExecStart=$(which initiad) start --home $HOME/.initia
 Restart=on-failure
-RestartSec=10
-LimitNOFILE=10000
+LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target
